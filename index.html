@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timão Web - Todo Poderoso</title>
+    
+    <!-- ESTILO CSS (Visual do Site Alvinegro) -->
+    <style>
+        :root {
+            --cor-principal: #111111;
+            --cor-secundaria: #ffffff;
+            --cor-cinza: #f4f4f4;
+            --cor-texto: #333333;
+            --cor-borda: #dddddd;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--cor-cinza);
+            color: var(--cor-texto);
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: var(--cor-principal);
+            color: var(--cor-secundaria);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 5px solid #333;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            margin: 5px 0 0 0;
+            font-style: italic;
+            opacity: 0.8;
+        }
+
+        /* Container Principal */
+        .main-container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* Seções de Cartões */
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--cor-principal);
+        }
+
+        .card h2 {
+            margin-top: 0;
+            color: var(--cor-principal);
+            border-bottom: 2px solid var(--cor-cinza);
+            padding-bottom: 10px;
+        }
+
+        /* Grid de Próximos Jogos */
+        .jogos-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .jogo-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px;
+            background-color: var(--cor-cinza);
+            border-radius: 8px;
+            border: 1px solid var(--cor-borda);
+        }
+
+        .time-confronto {
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .detalhes-jogo {
+            text-align: right;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* Seção Interativa de Títulos */
+        .titulo-contador {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .contador-box {
+            background-color: var(--cor-principal);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            min-width: 120px;
+            flex: 1;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .contador-box:hover {
+            transform: scale(1.05);
+            background-color: #222;
+        }
+
+        .contador-numero {
+            font-size: 2rem;
+            font-weight: bold;
+            display: block;
+        }
+
+        .contador-nome {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.9;
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--cor-principal);
+            color: white;
+            font-size: 0.9rem;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CORPO HTML (Estrutura da Página) -->
+    <header>
+        <h1>🦅 SPORT CLUB CORINTHIANS</h1>
+        <p>"Salve o Corinthians, o campeão dos campeões!"</p>
+    </header>
+
+    <div class="main-container">
+        
+        <!-- Cartão 1: História Rápida -->
+        <div class="card">
+            <h2>Nossa História</h2>
+            <p>Fundado em 1º de setembro de 1910 por um grupo de operários no bairro do Bom Retiro, o Corinthians nasceu para ser o clube do povo. Inspirado no <em>Corinthian FC</em> da Inglaterra, o Timão se tornou um dos maiores e mais apaixonados clubes de futebol do planeta.</p>
+        </div>
+
+        <!-- Cartão 2: Próximos Compromissos -->
+        <div class="card">
+            <h2>Próximos Jogos</h2>
+            <div class="jogos-grid">
+                <div class="jogo-item">
+                    <div class="time-confronto">Corinthians × Fluminense</div>
+                    <div class="detalhes-jogo">
+                        <div>Brasileirão Série A</div>
+                        <strong>Domingo, 16:00</strong>
+                    </div>
+                </div>
+                <div class="jogo-item">
+                    <div class="time-confronto">São Paulo × Corinthians</div>
+                    <div class="detalhes-jogo">
+                        <div>Clássico Majestoso</div>
+                        <strong>Quarta-feira, 21:45</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cartão 3: Painel de Conquistas (Interativo) -->
+        <div class="card">
+            <h2>Galeria de Glórias</h2>
+            <p>Clique nos blocos para simular a emoção de gritar "É CAMPEÃO!" e celebrar as nossas maiores taças:</p>
+            
+            <div class="titulo-contador">
+                <div class="contador-box" onclick="celebrarTitulo('Mundial de Clubes da FIFA')">
+                    <span class="contador-numero" id="qtd-mundial">2</span>
+                    <span class="contador-nome">Mundiais</span>
+                </div>
+                <div class="contador-box" onclick="celebrarTitulo('Conmebol Libertadores')">
+                    <span class="contador-numero" id="qtd-liberta">1</span>
+                    <span class="contador-nome">Libertadores</span>
+                </div>
+                <div class="contador-box" onclick="celebrarTitulo('Campeonato Brasileiro')">
+                    <span class="contador-numero" id="qtd-br">7</span>
+                    <span class="contador-nome">Brasileiros</span>
+                </div>
+                <div class="contador-box" onclick="celebrarTitulo('Copa do Brasil')">
+                    <span class="contador-numero" id="qtd-copabrasil">3</span>
+                    <span class="contador-nome">Copas do Brasil</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Vai Corinthians! © 2026 — Desenvolvido por um Louco do Bando.</p>
+    </footer>
+
+    <!-- JAVASCRIPT (Lógica e Interações da Página) -->
+    <script>
+        function celebrarTitulo(nomeTitulo) {
+            // Emite um alerta na tela simulando a comemoração
+            alert(`🏆 VAI CORINTHIANS! Comemorando mais um título de: ${nomeTitulo}!`);
+            console.log(`O torcedor celebrou o título: ${nomeTitulo}`);
+        }
+    </script>
+</body>
+</html>
