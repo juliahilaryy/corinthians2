@@ -68,6 +68,21 @@
             padding-bottom: 10px;
         }
 
+        /* Estilo customizado para a imagem injetada ficar bem grande */
+        .imagem-zoacao-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .imagem-zoacao-container img {
+            width: 100%;
+            max-width: 750px;
+            height: auto;
+            border-radius: 8px;
+            border: 3px dashed #ff0000;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
         /* Grid de Próximos Jogos */
         .jogos-grid {
             display: flex;
@@ -148,54 +163,59 @@
 </head>
 <body>
 
-    <!-- CORPO HTML (Estrutura da Página) -->
+    <!-- CORPO HTML (Estrutura da Página Original Mantida) -->
     <header>
-        <h1>🦅 SPORT CLUB CORINTHIANS</h1>
-        <p>"Salve o Corinthians, o campeão dos campeões!"</p>
+        <h1>🛑 PÁ! ACESSO NEGADO - INVASÃO DETECTADA</h1>
+        <p>"Salve o Corinthians... o freguês dos fregueses!"</p>
     </header>
 
     <div class="main-container">
         
-        <!-- Cartão 1: História Rápida -->
-        <div class="card">
-            <h2>Nossa História</h2>
-            <p>Fundado em 1º de setembro de 1910 por um grupo de operários no bairro do Bom Retiro, o Corinthians nasceu para ser o clube do povo. Inspirado no <em>Corinthian FC</em> da Inglaterra, o Timão se tornou um dos maiores e mais apaixonados clubes de futebol do planeta.</p>
+        <!-- Cartão 1: Substituído pela Imagem do Link Enviado -->
+        <div class="card" style="border-left-color: #ff0000;">
+            <h2>História Recente Atualizada</h2>
+            <p>Abaixo está registrado o momento exato em que o sistema foi modificado para exibir a nova realidade de Itaquera:</p>
+            <div class="imagem-zoacao-container">
+                <!-- LINK DA IMAGEM ADICIONADO AQUI -->
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbQhG7GwB-s7JN5qc7vOlAb2mQwFa32zYdHBrsLn-43mHIAkwqHW7rWfU&s=10" alt="Memphis Depay errando o pênalti">
+                <p style="font-weight: bold; color: #ff0000; margin-top: 10px;">🚨 URGENTE: Chute do Memphis foi parar em outra página web!</p>
+            </div>
         </div>
 
-        <!-- Cartão 2: Próximos Compromissos -->
+        <!-- Cartão 2: Próximos Compromissos Modificados -->
         <div class="card">
-            <h2>Próximos Jogos</h2>
+            <h2>Próximos Desesperos</h2>
             <div class="jogos-grid">
                 <div class="jogo-item">
-                    <div class="time-confronto">Corinthians × Fluminense</div>
+                    <div class="time-confronto">Corinthians × Série B</div>
                     <div class="detalhes-jogo">
-                        <div>Brasileirão Série A</div>
+                        <div>Campeonato de Rebaixamento</div>
                         <strong>Domingo, 16:00</strong>
                     </div>
                 </div>
                 <div class="jogo-item">
-                    <div class="time-confronto">São Paulo × Corinthians</div>
+                    <div class="time-confronto">Cobranças de Pênalti × Memphis Depay</div>
                     <div class="detalhes-jogo">
-                        <div>Clássico Majestoso</div>
+                        <div>Clássico do Isolamento</div>
                         <strong>Quarta-feira, 21:45</strong>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Cartão 3: Painel de Conquistas (Interativo) -->
+        <!-- Cartão 3: Painel de Conquistas (Zoadas no JavaScript) -->
         <div class="card">
-            <h2>Galeria de Glórias</h2>
-            <p>Clique nos blocos para simular a emoção de gritar "É CAMPEÃO!" e celebrar as nossas maiores taças:</p>
+            <h2>Galeria de Glórias Penhoradas</h2>
+            <p>Clique nos blocos para simular a resposta do sistema de auditoria sobre as taças:</p>
             
             <div class="titulo-contador">
-                <div class="contador-box" onclick="celebrarTitulo('Mundial de Clubes da FIFA')">
+                <div class="contador-box" onclick="celebrarTitulo('Mundial')">
                     <span class="contador-numero" id="qtd-mundial">2</span>
-                    <span class="contador-nome">Mundiais</span>
+                    <span class="contador-nome">Mundiais (A procurar via Fax)</span>
                 </div>
-                <div class="contador-box" onclick="celebrarTitulo('Conmebol Libertadores')">
+                <div class="contador-box" onclick="celebrarTitulo('Libertadores')">
                     <span class="contador-numero" id="qtd-liberta">1</span>
-                    <span class="contador-nome">Libertadores</span>
+                    <span class="contador-nome">Libertadores (Demorou um século)</span>
                 </div>
                 <div class="contador-box" onclick="celebrarTitulo('Campeonato Brasileiro')">
                     <span class="contador-numero" id="qtd-br">7</span>
@@ -211,15 +231,19 @@
     </div>
 
     <footer>
-        <p>Vai Corinthians! © 2026 — Desenvolvido por um Louco do Bando.</p>
+        <p>Vai Corinthians... parcelar as contas! © 2026 — Página Modificada com Sucesso.</p>
     </footer>
 
-    <!-- JAVASCRIPT (Lógica e Interações da Página) -->
+    <!-- JAVASCRIPT ORIGINAL ALTERADO APENAS NOS ALERTAS -->
     <script>
         function celebrarTitulo(nomeTitulo) {
-            // Emite um alerta na tela simulando a comemoração
-            alert(`🏆 VAI CORINTHIANS! Comemorando mais um título de: ${nomeTitulo}!`);
-            console.log(`O torcedor celebrou o título: ${nomeTitulo}`);
+            if(nomeTitulo === 'Mundial') {
+                alert("❌ ERRO 404: Passaporte para o primeiro mundial não encontrado no servidor!");
+            } else if(nomeTitulo === 'Libertadores') {
+                alert("⏳ Erro de tempo limite: Demorou 102 anos para carregar o primeiro registro!");
+            } else {
+                alert(`🏆 Alerta do Oficial de Justiça: O título de ${nomeTitulo} foi retido para cobrir dívidas de marmitas antigas!`);
+            }
         }
     </script>
 </body>
